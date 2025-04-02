@@ -6,7 +6,7 @@
 /*   By: mkulikov <mkulikov@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:05:02 by mkulikov          #+#    #+#             */
-/*   Updated: 2025/04/01 15:04:03 by mkulikov         ###   ########.fr       */
+/*   Updated: 2025/04/02 14:51:22 by mkulikov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,15 +84,18 @@ void Bureaucrat::signForm(Form &f)
 	}
 }
 
-const char* Bureaucrat::GradeTooHighException::what() const throw() {
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
 	return "Grade is too high!";
 }
 
-const char* Bureaucrat::GradeTooLowException::what() const throw() {
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
 	return "Grade is too low!";
 }
 
-std::ostream& operator<<(std::ostream& os, const Bureaucrat& b) {
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
+{
 	os << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
 	return os;
 }

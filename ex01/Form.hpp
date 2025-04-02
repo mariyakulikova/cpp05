@@ -6,7 +6,7 @@
 /*   By: mkulikov <mkulikov@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 20:16:02 by mkulikov          #+#    #+#             */
-/*   Updated: 2025/04/01 14:45:17 by mkulikov         ###   ########.fr       */
+/*   Updated: 2025/04/02 16:35:27 by mkulikov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,18 @@ public:
 	int getGradeToExecute() const;
 	const std::string getName() const;
 	void beSigned(Bureaucrat &b);
+
+	class GradeTooHighException : public std::exception
+	{
+	public:
+		const char* what() const throw();
+	};
+
+	class GradeTooLowException : public std::exception
+	{
+	public:
+		const char* what() const throw();
+	};
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& f);

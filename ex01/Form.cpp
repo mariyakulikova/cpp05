@@ -6,7 +6,7 @@
 /*   By: mkulikov <mkulikov@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 20:15:39 by mkulikov          #+#    #+#             */
-/*   Updated: 2025/04/01 15:11:53 by mkulikov         ###   ########.fr       */
+/*   Updated: 2025/04/02 16:35:43 by mkulikov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ Form::Form(const std::string &name, int gradeToExecute, int gradeToSign)
 	, _gradeToSign(gradeToSign)
 	, _gradeToExecute(gradeToExecute)
 {
+	if (gradeToSign < 1 || gradeToExecute < 1)
+		throw GradeTooHighException();
+	if (gradeToSign > 150 || gradeToExecute > 150)
+		throw GradeTooLowException();
 	std::cout << "Form parameterized constructor called" << std::endl;
 }
 
@@ -85,4 +89,12 @@ std::ostream &operator<<(std::ostream &os, const Form &f)
 		<< " grade to execute - " << f.getGradeToExecute()
 		<< " grade to sign - " << f.getGradeToSign();
 	return os;
+}
+
+const char* Form::GradeTooLowException::what() const throw() {
+	return "Form's grade is too low!";
+}
+
+const char* Form::GradeTooHighException::what() const throw() {
+	return "Form's grade is too high!";
 }
