@@ -6,7 +6,7 @@
 /*   By: mkulikov <mkulikov@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 20:16:02 by mkulikov          #+#    #+#             */
-/*   Updated: 2025/04/02 17:05:26 by mkulikov         ###   ########.fr       */
+/*   Updated: 2025/04/02 18:20:41 by mkulikov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 	AForm(const std::string &name, int gradeToSign, int gradeToExecute, std::string target);
 	AForm(const AForm &other);
 	AForm &operator=(const AForm &other);
-	~AForm();
+	virtual ~AForm();
 	bool getIsSigned() const;
 	void setIsSigned(bool status);
 	int getGradeToSign() const;
