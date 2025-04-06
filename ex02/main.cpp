@@ -6,7 +6,7 @@
 /*   By: mkulikov <mkulikov@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 16:06:52 by mkulikov          #+#    #+#             */
-/*   Updated: 2025/04/02 17:22:29 by mkulikov         ###   ########.fr       */
+/*   Updated: 2025/04/06 15:50:55 by mkulikov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 
 int main()
 {
-	srand (time(NULL));
 	Bureaucrat b("Bob", 33);
 	Bureaucrat a("Ann", 1);
 	ShrubberyCreationForm f1("target1");

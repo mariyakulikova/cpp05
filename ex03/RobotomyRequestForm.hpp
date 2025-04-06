@@ -6,14 +6,15 @@
 /*   By: mkulikov <mkulikov@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 13:48:11 by mkulikov          #+#    #+#             */
-/*   Updated: 2025/04/02 16:49:03 by mkulikov         ###   ########.fr       */
+/*   Updated: 2025/04/06 15:49:49 by mkulikov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <fstream>
+#include <cstdlib>
+#include <ctime>
 #include "AForm.hpp"
 
 class RobotomyRequestForm : public AForm

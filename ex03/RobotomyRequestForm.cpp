@@ -6,7 +6,7 @@
 /*   By: mkulikov <mkulikov@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 13:47:32 by mkulikov          #+#    #+#             */
-/*   Updated: 2025/04/02 16:49:03 by mkulikov         ###   ########.fr       */
+/*   Updated: 2025/04/06 15:50:40 by mkulikov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void RobotomyRequestForm::executeAction() const
 {
-	if ((rand() % 100) % 2 == 0)
+	srand(time(NULL));
+	if ((rand() % 10) % 2 == 0)
 		std::cout << getTarget() << " has been robotomized successfully 50\% of the time. " << std::endl;
 	else
 		std::cout << "the robotomy failed" << std::endl;
