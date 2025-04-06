@@ -6,7 +6,7 @@
 /*   By: mkulikov <mkulikov@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:05:02 by mkulikov          #+#    #+#             */
-/*   Updated: 2025/03/31 17:35:50 by mkulikov         ###   ########.fr       */
+/*   Updated: 2025/04/06 15:52:30 by mkulikov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void Bureaucrat::decrementGrade()
 {
 	if (_grade >= 150)
 		throw Bureaucrat::GradeTooLowException();
-	_grade -= 1;
+	_grade += 1;
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
